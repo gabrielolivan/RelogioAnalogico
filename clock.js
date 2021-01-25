@@ -22,7 +22,7 @@ function relogioAnalog(id) {
     //CSS do Molde
     molde.style.borderRadius = "50%";
 	molde.style.backgroundColor = this.bgColor;
-	molde.style.border = "solid 1px #ccc";
+	molde.style.border = "solid 2px #fff";
 	molde.style.width = this.width + "px";
 	molde.style.height = this.width + "px";
 	molde.style.position = "relative";
@@ -147,9 +147,9 @@ function relogioAnalog(id) {
 	this.loop = setInterval(function () {
 		var hoje = new Date();
 
-		var anguloSegundos = 1.0 * 360 / 60 * hoje.getSeconds();
-		var anguloMinutos = 1.0 * 360 / 60 * hoje.getMinutes();
-		var anguloHoras = 1.0 * 360 / 12 * (hoje.getHours() % 12) + 1.0 * 360 / 12 * (hoje.getMinutes() / 60);
+		var anguloSegundos = 360 / 60 * hoje.getSeconds();
+		var anguloMinutos = 360 / 60 * hoje.getMinutes();
+		var anguloHoras = 360 / 12 * (hoje.getHours() % 12) + 360 / 12 * (hoje.getMinutes() / 60);
 
 		segundo.style.transform = 'rotate(' + anguloSegundos + 'deg)';
 		minuto.style.transform = 'rotate(' + anguloMinutos + 'deg)';
